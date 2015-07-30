@@ -15,7 +15,7 @@ NONETWORK=no
 SKIPLIBVLCCOMPILATION=no
 SCARY=yes
 
-TESTEDHASH=9d6da84e3
+TESTEDHASH=d46dee7
 
 usage()
 {
@@ -137,7 +137,7 @@ spushd MobileVLCKit/ImportedSources
 
 if [ "$NONETWORK" != "yes" ]; then
 if ! [ -e vlc ]; then
-git clone git://git.videolan.org/vlc/vlc-2.2.git vlc
+git clone https://github.com/strukturag/vlc-2.2.git vlc
 info "Applying patches to vlc-2.2.git"
 cd vlc
 git checkout -B localBranch ${TESTEDHASH}
